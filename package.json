@@ -1,0 +1,22 @@
+{
+  "name": "assessment",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "cucumber": "cucumber-js src/features/ -f json:cucumber_report.json src/features/ -r src/steps/ --parallel 3 && node ./report.js",
+    "test": "cucumber-js src/features/ -f json:cucumber_report.json src/features/ -r src/steps/ --tags @user-service",
+    "report": "node ./report.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@cucumber/cucumber": "^7.3.2",
+    "axios": "^0.26.1",
+    "dotenv": "^16.0.0"
+  },
+  "devDependencies": {
+    "cucumber-html-reporter": "^5.5.0"
+  }
+}

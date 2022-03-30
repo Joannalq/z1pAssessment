@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "cucumber": "cucumber-js src/features/ -f json:cucumber_report.json src/features/ -r src/steps/ --parallel 3 && node ./report.js",
+    "cucumber": "cucumber-js src/features/ -f json:cucumber_report.json src/features/ -r src/steps/ --parallel 3 & node ./report.js",
     "test": "cucumber-js src/features/ -f json:cucumber_report.json src/features/ -r src/steps/ --tags @user-service",
     "report": "node ./report.js"
   },

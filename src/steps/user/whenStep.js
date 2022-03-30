@@ -11,9 +11,7 @@ When('I send POST request to {string}', async function (path) {
 });
 
 When('I send GET request to {string}', async function (path) {
-  this.response = await restHelper.getData(
-    `${process.env.SERVICE_URL}${path}/${this.id}`
-  );
+  this.response = await restHelper.getData(`${process.env.SERVICE_URL}${path}`);
 });
 
 When('I send PUT request to {string}', async function (path) {
